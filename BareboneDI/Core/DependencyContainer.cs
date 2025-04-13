@@ -95,6 +95,19 @@ namespace BareboneDI.Core
             _registrations[serviceType] = registration;
         }
 
+        /// <summary>
+        /// Registers a module which encapsulates a group of related service registrations.
+        /// </summary>
+        /// <param name="module">The module instance containing registration logic.</param>
+        /// <exception cref="ArgumentNullException">Thrown if the module is null.</exception>
+        public void RegisterModule(Module module)
+        {
+            if (module == null)
+                throw new ArgumentNullException(nameof(module));
+
+            module.Load(this);
+        }
+
         #endregion
 
         #region Delegate / Factory Registration

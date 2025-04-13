@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>BareboneDI</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Orhan Fırtına</authors>
     <owners>OrhSoft</owners>
     <description>A lightweight DI container that supports open generics, keyed registrations, property injection, lifetime scopes, modules, auto-registration, factory registrations, parameter overrides, collection resolution, and basic interception.</description>

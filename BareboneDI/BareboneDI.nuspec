@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>BareboneDI</id>
+    <version>1.0.0</version>
+    <authors>Orhan Fırtına</authors>
+    <owners>OrhSoft</owners>
+    <description>A lightweight DI container that supports open generics, keyed registrations, property injection, lifetime scopes, modules, auto-registration, factory registrations, parameter overrides, collection resolution, and basic interception.</description>
+    <tags>dependency injection di container open generics factory registration interception</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<projectUrl>https://github.com/YourRepo/BareboneDI</projectUrl>-->
+    <icon>Images/logo.png</icon>
+    <releaseNotes>Initial release</releaseNotes>
+    <readme>README.md</readme>
+    <copyright>Copyright 2025</copyright>
+
+    <!-- Dependencies should be within the metadata section -->
+    <dependencies>
+    </dependencies>
+  </metadata>
+  
+  
+  <files>
+    <file src="bin\Release\BareboneDI.dll" target="lib\net472\BareboneDI.dll" />
+    <file src="bin\Release\BareboneDI.xml" target="lib\net472\BareboneDI.xml" />
+    <file src="README.md" target="README.md" />
+    <file src="Images/logo.png" target="Images/logo.png" />
+  </files>
+</package>

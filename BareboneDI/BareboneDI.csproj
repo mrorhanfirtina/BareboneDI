@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\InjectAttribute.cs" />
-    <Compile Include="Core\DependencyContainer .cs" />
+    <Compile Include="Core\DependencyContainer.cs" />
     <Compile Include="Core\LifetimeScope.cs" />
     <Compile Include="Core\Module.cs" />
     <Compile Include="Core\Registration.cs" />

@@ -74,6 +74,27 @@ namespace BareboneDI.Core
             keyedDict[key] = new Registration(implementationType, lifetime);
         }
 
+        /// <summary>
+        /// Registers a pre-constructed instance of a service as a singleton.
+        /// Every call to <c>Resolve&lt;TService&gt;</c> will return the same instance.
+        /// </summary>
+        /// <typeparam name="TService">The service type to register.</typeparam>
+        /// <param name="instance">The instance to register and reuse.</param>
+        /// <exception cref="ArgumentNullException">Thrown if the provided instance is null.</exception>
+        public void RegisterInstance<TService>(TService instance)
+        {
+            if (instance == null)
+                throw new ArgumentNullException(nameof(instance));
+
+            var serviceType = typeof(TService);
+            var registration = new Registration(serviceType, Lifetime.Singleton)
+            {
+                SingletonInstance = instance
+            };
+
+            _registrations[serviceType] = registration;
+        }
+
         #endregion
 
         #region Delegate / Factory Registration
